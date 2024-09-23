@@ -1,29 +1,38 @@
 // donation noakhali amount button
-document.getElementById("donate-submit-noakhali").addEventListener("click", function(){
-    
+document.getElementById("donate-submit-noakhali").addEventListener("click", function () {
+
     // get the input value
     const donateNoakhali = getInputFieldValueById("donation-amount-noakhali");
 
-     // validation 
-     if(isNaN(donateNoakhali) || donateNoakhali <= 0 ){
-        alert("Invalid donation Amount")
+    // validation 
+
+    // check input field is empty.
+    if (!donateNoakhali) {
+        alert('Please donation amount.');
         return;
-       }
-       
-     // donation noakhali 
+    }
+
+    // check input field contains an invalid number
+    if (isNaN(donateNoakhali) || donateNoakhali <= 0) {
+        alert("Invalid donation amount")
+        return;
+    }
+
+    // donation noakhali 
     const balance = getTextfieldValueById("donation-noakhali");
     const newBalance = balance + donateNoakhali;
-   
+
     document.getElementById("donation-noakhali").innerText = newBalance;
-    
+
     const availableBalance = getTextfieldValueById("available-balance");
-  
-        // validation for Donation amount exceeds available balance
-        if(donateNoakhali > availableBalance){
-            alert("donation amount is greater than the account balance..")
-            return;
-        }
-    
+
+    // validation for Donation amount exceeds available balance
+
+    if (donateNoakhali > availableBalance) {
+        alert("donation amount exceeds the available balance..")
+        return;
+    }
+
     const totalBalance = availableBalance - donateNoakhali;
     //navbar available balance show
     document.getElementById("available-balance").innerText = totalBalance;
@@ -33,60 +42,66 @@ document.getElementById("donate-submit-noakhali").addEventListener("click", func
     // history section
     const historyItems = document.createElement("div");
     historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
-    historyItems.innerHTML =`
+    historyItems.innerHTML = `
         <h1 class="text-secondary text-xl font-bold mb-3">${donateNoakhali} Taka is ${donationNameNoakhali}.</h1>
         <p class="text-secondary opacity-70">${new Date()}</p>
     `;
     const historyContainer = document.getElementById("history-list");
-   
+
     historyContainer.appendChild(historyItems);
 
-  // open the modal
+    // open the modal
     document.getElementById('donated-noakhali-modal').showModal();
 })
 
 
 // donation feni 
-document.getElementById("donate-submit-feni").addEventListener("click", function(){
+document.getElementById("donate-submit-feni").addEventListener("click", function () {
     // get the input value
-     const donateFani = getInputFieldValueById("donation-amount-feni");
+    const donateFani = getInputFieldValueById("donation-amount-feni");
 
-      // validation
-      if(isNaN(donateFani) || donateFani <= 0 ){
+    // validation
+    // check input field is empty.
+    if (!donateFani) {
+        alert('Please donation amount.');
+        return;
+    }
+    // check input field contains an invalid number
+    if (isNaN(donateFani) || donateFani <= 0) {
         alert("Invalid donation Amount");
         return;
-       }
+    }
 
-     const balance = getTextfieldValueById("donation-feni");
-     const newBalance = balance + donateFani;
-    
-     document.getElementById("donation-feni").innerText = newBalance;
-     
-     const availableBalance = getTextfieldValueById("available-balance");
+    const balance = getTextfieldValueById("donation-feni");
+    const newBalance = balance + donateFani;
 
-      // validation
-    if(donateFani > availableBalance){
+    document.getElementById("donation-feni").innerText = newBalance;
+
+    const availableBalance = getTextfieldValueById("available-balance");
+
+    // validation for Donation amount exceeds available balance
+    if (donateFani > availableBalance) {
         alert("donation amount is greater than the account balance..")
         return;
     }
-     const totalBalance = availableBalance - donateFani;
+    const totalBalance = availableBalance - donateFani;
 
-     document.getElementById("available-balance").innerText = totalBalance;
-     // get the title value
-     const donationNameFeni = document.getElementById("donation-name-feni").innerText;
+    document.getElementById("available-balance").innerText = totalBalance;
+    // get the title value
+    const donationNameFeni = document.getElementById("donation-name-feni").innerText;
 
 
-       // history section
+    // history section
     const historyItems = document.createElement("div");
     historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
-    historyItems.innerHTML =`
+    historyItems.innerHTML = `
         <h1 class="text-secondary text-xl font-bold mb-3">${donateFani} Taka is ${donationNameFeni}.</h1>
         <p class="text-secondary opacity-70">${new Date()}</p>
     `;
     const historyContainer = document.getElementById("history-list");
-   
+
     historyContainer.appendChild(historyItems);
-     
+
     // open the modal
     document.getElementById('donated-feni-modal').showModal();
 
@@ -95,15 +110,21 @@ document.getElementById("donate-submit-feni").addEventListener("click", function
 
 // donation Quota
 
-document.getElementById("donate-submit-quota").addEventListener("click", function(){
+document.getElementById("donate-submit-quota").addEventListener("click", function () {
     // get the input value
     const donateQuota = getInputFieldValueById("donate-amount-quota");
-   
-     // validation
-     if(isNaN(donateQuota) || donateQuota <= 0 ){
+
+    // validation
+    // check input field is empty.
+    if (!donateQuota) {
+        alert('Please donation amount.');
+        return;
+    }
+    // check input field contains an invalid number
+    if (isNaN(donateQuota) || donateQuota <= 0) {
         alert("Invalid donation Amount");
         return;
-       } 
+    }
 
     const balance = getTextfieldValueById("donation-quota");
     const newBalance = balance + donateQuota;
@@ -112,8 +133,8 @@ document.getElementById("donate-submit-quota").addEventListener("click", functio
 
     const availableBalance = getTextfieldValueById("available-balance");
 
-       // validation
-       if(donateQuota > availableBalance){
+     // validation for Donation amount exceeds available balance
+    if (donateQuota > availableBalance) {
         alert("donation amount is greater than the account balance..")
         return;
     }
@@ -122,18 +143,18 @@ document.getElementById("donate-submit-quota").addEventListener("click", functio
     document.getElementById("available-balance").innerText = totalBalance;
     // get the title value
     const donationNameQuota = document.getElementById("donation-name-quota").innerText;
-    
-      // history section
-      const historyItems = document.createElement("div");
-      historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
-      historyItems.innerHTML =`
+
+    // history section
+    const historyItems = document.createElement("div");
+    historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
+    historyItems.innerHTML = `
           <h1 class="text-secondary text-xl font-bold mb-3">${donateQuota} Taka is Donated for ${donationNameQuota}.</h1>
           <p class="text-secondary opacity-70">${new Date()}</p>
       `;
-      const historyContainer = document.getElementById("history-list");
-     
-      historyContainer.appendChild(historyItems);
+    const historyContainer = document.getElementById("history-list");
 
-       // open the modal
+    historyContainer.appendChild(historyItems);
+
+    // open the modal
     document.getElementById('donated-quota-modal').showModal();
 })

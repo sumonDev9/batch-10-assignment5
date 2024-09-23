@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <!-- Lexend google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!-- tailwindcss and  daisyui link cdn-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- share style -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgColor: '#F9F7F3',
+            primary: '#B4F461',
+            secondary: '#111111',
+          },
+          fontFamily: {
+            Lexend: "Lexend",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-Lexend">
+  <!-- header start here -->
+  <header class="bg-bgColor sticky top-0 z-10">
+    <!-- navbar start here -->
+    <nav class="w-11/12 mx-auto flex justify-between items-center py-4">
+      <!-- left side blog button -->
+      <div>
+        <button class="btn bg-primary text-xl font-semibold hover:bg-primary"><a href="./index.html">Home</a></button>
+      </div>
+      <!-- center Donate Bangladesh -->
+      <div class="flex items-center gap-3">
+        <img src="./assets/logo.png" class="w-8 h-9" alt="">
+        <p class="text-xl font-semibold text-secondary md:block hidden">Donate Bangladesh</p>
+      </div>
+      <!-- right side 5500 BDT -->
+      <div class="flex items-center gap-2">
+        <img src="./assets/coin.png" alt="">
+        <p class="text-xl font-medium text-secondary opacity-70"> <span id="available-balance">5500</span> BDT</p>
+      </div>
+    </nav>
+
+    <!-- navbar end here -->
+  </header>
+  <!-- header end here -->
+
+  <!-- main start here -->
+  <main class="w-11/12 mx-auto mt-10">
+    <h1 class="text-secondary text-4xl font-bold">Important FAQ</h1>
+
+    <!-- FAQ start here -->
+    <div class="my-9">
+      <!-- question 1 -->
+      <div class="collapse collapse-plus shadow border-2 boredr-border-[rgba(17, 17, 17, 0.1)] mb-3">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium text-secondary">What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p class="text-lg text-secondary font-semibold opacity-70">The Document Object Model (DOM) is a programming
+            interface that represents an HTML or XML document as a structured tree of objects, allowing developers to
+            manipulate and interact with a webpage's content, structure, and style dynamically using languages like
+            JavaScript.</p>
+        </div>
+      </div>
+      <!-- question 2 -->
+      <div class="collapse collapse-plus shadow border-2 border-[rgba(17, 17, 17, 0.1)] mb-3">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium text-secondary">How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p class="text-lg text-secondary font-semibold opacity-70">You can select an element from the DOM using
+            JavaScript methods like getElementById(), getElementsByClassName(), getElementsByTagName(), or
+            querySelector() for specific CSS selectors.</p>
+        </div>
+      </div>
+      <!-- question 3 -->
+      <div class="collapse collapse-plus shadow border-2 border-[rgba(17, 17, 17, 0.1)] mb-3">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium text-secondary"> What is event delegation in the context of the
+          DOM, and why is it useful?</div>
+        <div class="collapse-content">
+          <p class="text-lg text-secondary font-semibold opacity-70">Event delegation is a technique where a single
+            event listener is added to a parent element to manage events for multiple child elements. It’s useful
+            because it improves performance by reducing memory usage, simplifies code by centralizing event handling,
+            and allows for automatic handling of events on dynamically added elements.</p>
+        </div>
+      </div>
+      <!-- question 4 -->
+      <div class="collapse collapse-plus shadow border-2 border-[rgba(17, 17, 17, 0.1)] mb-3">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium text-secondary">How do you manipulate an element's attributes and
+          styles using the DOM?</div>
+        <div class="collapse-content">
+          <p class="text-lg text-secondary font-semibold opacity-70">
+            You can manipulate an element's attributes using getAttribute(), setAttribute(), and removeAttribute(). For
+            styles, use element.style.propertyName to set styles and window.getComputedStyle(element) to get computed
+            styles.</p>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ end here -->
+  </main>
+  <!-- main end here -->
+
+  <!-- footer start here -->
+  <section class="py-12 bg-bgColor mt-20">
+
+  </section>
+  <!-- footer end here -->
+</body>
+
+</html>

@@ -35,12 +35,14 @@
 
   <!-- header start here -->
 
-  <!-- navbar start here -->
+
   <header class="bg-bgColor sticky top-0 z-10">
+
+    <!-- navbar start here -->
     <nav class="w-11/12 mx-auto flex justify-between items-center py-4">
       <!-- left side blog button -->
       <div>
-        <button class="btn bg-primary text-xl font-semibold hover:bg-primary"><a href="#">Blog</a></button>
+        <button class="btn bg-primary text-xl font-semibold hover:bg-primary"><a href="./blog.html">Blog</a></button>
       </div>
       <!-- center Donate Bangladesh -->
       <div class="flex items-center gap-3">
@@ -54,6 +56,8 @@
       </div>
     </nav>
 
+    <!-- navbar end here -->
+
     <!-- Donation & History button start here-->
     <div class="bg-white py-8 md:pt-12 flex justify-center items-center gap-4">
       <button id="donation-tab"
@@ -63,16 +67,18 @@
     </div>
     <!-- Donation & History button end here-->
   </header>
-  <!-- navbar end here -->
+
 
   <!-- header end here -->
 
   <!-- mian start here -->
 
+
   <!-- Donation start here -->
   <div id="donate-section" class="w-11/12 mx-auto mt-8 space-y-8">
     <!-- card 1 -->
-    <div class="card card-side flex-col lg:flex-row gap-8 bg-white rounded-2xl p-5 md:p-8 border-2 border-[ rgba(17, 17, 17, 0.1)]">
+    <div
+      class="card card-side flex-col lg:flex-row gap-8 bg-white rounded-2xl p-5 md:p-8 border-2 border-[rgba(17, 17, 17, 0.1)]">
       <!-- img -->
       <figure>
         <img src="./assets/noakhali.png" alt="">
@@ -87,36 +93,39 @@
           </button>
         </div>
         <!-- title -->
-        <h2 id="donation-name-noakhali" class="text-xl font-bold text-secondary">Donate for Flood at Noakhali, Bangladesh</h2>
+        <h2 id="donation-name-noakhali" class="text-xl font-bold text-secondary">Donate for Flood at Noakhali,
+          Bangladesh</h2>
         <!-- description -->
         <p class="text-base font-light text-secondary opacity-70"> The recent floods in Noakhali have caused significant
           damage to homes infrastructure. Your donation will help provide essential supplies and to those affected by
           this disaster. Every contribution, big or small, makes difference. Please join us in supporting the relief
           efforts and making a positive impact on the lives of those in need.</p>
-          <!-- donate input flied -->
+        <!-- donate input flied -->
         <input id="donation-amount-noakhali" type="text" placeholder="Write Donation Amount"
           class="input input-bordered rounded-lg w-full placeholder:font-light placeholder:text-sencondary" />
-          <!-- donate submit button -->
-        <button id="donate-submit-noakhali" class="w-full px-3 py-3 bg-primary rounded-lg text-secondary font-semibold">Donate Now</button>
-          <!-- modal -->
-          <dialog id="donated-noakhali-modal" class="modal">
-            <div class="modal-box text-center space-y-4">
-              <h1 class="text-4xl font-extrabold text-secondary">Congrates!</h1>
-              <img src="./assets/coin.png" class="mx-auto" alt="">
-              <p class="text-secondary font-medium opacity-70">You Have Donated for Humankind</p>
-                <h2 class="text-secondary text-xl font-bold">Successfully</h2>
-              <div class="modal-action justify-center">
-                <form method="dialog">
-                 <button class="btn">close confirmation</button>
-                </form>
-              </div>
+        <!-- donate submit button -->
+        <button id="donate-submit-noakhali"
+          class="w-full px-3 py-3 bg-primary rounded-lg text-secondary font-semibold">Donate Now</button>
+        <!-- modal -->
+        <dialog id="donated-noakhali-modal" class="modal">
+          <div class="modal-box text-center space-y-4">
+            <h1 class="text-4xl font-extrabold text-secondary">Congrates!</h1>
+            <img src="./assets/coin.png" class="mx-auto" alt="">
+            <p class="text-secondary font-medium opacity-70">You Have Donated for Humankind</p>
+            <h2 class="text-secondary text-xl font-bold">Successfully</h2>
+            <div class="modal-action justify-center">
+              <form method="dialog">
+                <button class="btn">close confirmation</button>
+              </form>
             </div>
-          </dialog>
+          </div>
+        </dialog>
       </div>
     </div>
 
     <!-- card 2 -->
-    <div class="card card-side flex-col lg:flex-row gap-8 bg-white rounded-2xl p-5 md:p-8 border-2 border-[ rgba(17, 17, 17, 0.1)]">
+    <div
+      class="card card-side flex-col lg:flex-row gap-8 bg-white rounded-2xl p-5 md:p-8 border-2 border-[ rgba(17, 17, 17, 0.1)]">
       <!-- img -->
       <figure>
         <img src="./assets/feni.png" alt="">
@@ -130,33 +139,41 @@
           </button>
         </div>
         <!-- title -->
-        <h2 id="donation-name-feni" class="text-xl font-bold text-secondary">Donate for Flood Relief in Feni,Bangladesh</h2>
+        <h2 id="donation-name-feni" class="text-xl font-bold text-secondary">Donate for Flood Relief in Feni,Bangladesh
+        </h2>
         <!-- description -->
-        <p class="text-base font-light text-secondary opacity-70"> Donate for Flood Relief in Feni, Bangladesh" aims to provide urgent assistance to communities affected by recent devastating floods. Your contributions will help deliver essential supplies such as food, clean water, medical aid, and shelter to those in need. The initiative works with local organizations to ensure aid reaches the most vulnerable families, helping them recover and rebuild their lives. Every donation, no matter the size, makes a difference in restoring hope and stability to the affected communities in Feni.</p>
+        <p class="text-base font-light text-secondary opacity-70"> Donate for Flood Relief in Feni, Bangladesh" aims to
+          provide urgent assistance to communities affected by recent devastating floods. Your contributions will help
+          deliver essential supplies such as food, clean water, medical aid, and shelter to those in need. The
+          initiative works with local organizations to ensure aid reaches the most vulnerable families, helping them
+          recover and rebuild their lives. Every donation, no matter the size, makes a difference in restoring hope and
+          stability to the affected communities in Feni.</p>
         <!-- Donate amount -->
-        <input id="donation-amount-feni"  type="text" placeholder="Write Donation Amount"
+        <input id="donation-amount-feni" type="text" placeholder="Write Donation Amount"
           class="input input-bordered rounded-lg w-full placeholder:font-light placeholder:text-sencondary" />
-          <!-- donate button -->
-        <button id="donate-submit-feni" class="w-full px-3 py-3 bg-primary rounded-lg text-secondary font-semibold">Donate Now</button>
-              <!-- modal -->
-          <dialog id="donated-feni-modal" class="modal">
-            <div class="modal-box text-center space-y-4">
-              <h1 class="text-4xl font-extrabold text-secondary">Congrates!</h1>
-              <img src="./assets/coin.png" class="mx-auto" alt="">
-              <p class="text-secondary font-medium opacity-70">You Have Donated for Humankind</p>
-                <h2 class="text-secondary text-xl font-bold">Successfully</h2>
-              <div class="modal-action justify-center">
-                <form method="dialog">
-                 <button class="btn">close confirmation</button>
-                </form>
-              </div>
+        <!-- donate button -->
+        <button id="donate-submit-feni"
+          class="w-full px-3 py-3 bg-primary rounded-lg text-secondary font-semibold">Donate Now</button>
+        <!-- modal -->
+        <dialog id="donated-feni-modal" class="modal">
+          <div class="modal-box text-center space-y-4">
+            <h1 class="text-4xl font-extrabold text-secondary">Congrates!</h1>
+            <img src="./assets/coin.png" class="mx-auto" alt="">
+            <p class="text-secondary font-medium opacity-70">You Have Donated for Humankind</p>
+            <h2 class="text-secondary text-xl font-bold">Successfully</h2>
+            <div class="modal-action justify-center">
+              <form method="dialog">
+                <button class="btn">close confirmation</button>
+              </form>
             </div>
-          </dialog>
+          </div>
+        </dialog>
       </div>
     </div>
 
     <!-- card 3 -->
-    <div class="card card-side flex-col lg:flex-row gap-8 bg-white rounded-2xl p-5 md:p-8 border-2 border-[rgba(17, 17, 17, 0.1)]">
+    <div
+      class="card card-side flex-col lg:flex-row gap-8 bg-white rounded-2xl p-5 md:p-8 border-2 border-[rgba(17, 17, 17, 0.1)]">
       <!-- img -->
       <figure>
         <img src="./assets/quota-protest.png" alt="">
@@ -172,47 +189,60 @@
         <!-- title -->
         <h2 id="donation-name-quota" class="text-xl font-bold text-secondary">Aid for Injured in the Quota Movement</h2>
         <!-- description -->
-        <p class="text-base font-light text-secondary opacity-70 mb-6">The "Aid for Injured in the Quota Movement" initiative provides essential support to individuals injured during protests advocating for job reservations in India. This program aims to ensure that medical assistance, rehabilitation, and financial aid are accessible to those affected. By partnering with healthcare providers and community organizations, it addresses the immediate and long-term needs of the injured. Additionally, it raises awareness about the importance of peaceful protests and the rights of marginalized communities, fostering solidarity and resilience within society.
+        <p class="text-base font-light text-secondary opacity-70 mb-6">The "Aid for Injured in the Quota Movement"
+          initiative provides essential support to individuals injured during protests advocating for job reservations
+          in India. This program aims to ensure that medical assistance, rehabilitation, and financial aid are
+          accessible to those affected. By partnering with healthcare providers and community organizations, it
+          addresses the immediate and long-term needs of the injured. Additionally, it raises awareness about the
+          importance of peaceful protests and the rights of marginalized communities, fostering solidarity and
+          resilience within society.
         </p>
         <!-- input donate flied -->
         <input id="donate-amount-quota" type="text" placeholder="Write Donation Amount"
           class="input input-bordered rounded-lg w-full placeholder:font-light placeholder:text-sencondary" />
-          <!-- Donate button -->
-        <button id="donate-submit-quota" class="w-full px-3 py-3 bg-primary rounded-lg text-secondary font-semibold">Donate Now</button>
-              <!-- modal -->
-              <dialog id="donated-quota-modal" class="modal">
-                <div class="modal-box text-center space-y-4">
-                  <h1 class="text-4xl font-extrabold text-secondary">Congrates!</h1>
-                  <img src="./assets/coin.png" class="mx-auto" alt="">
-                  <p class="text-secondary font-medium opacity-70">You Have Donated for Humankind</p>
-                    <h2 class="text-secondary text-xl font-bold">Successfully</h2>
-                  <div class="modal-action justify-center">
-                    <form method="dialog">
-                     <button class="btn">close confirmation</button>
-                    </form>
-                  </div>
-                </div>
-              </dialog>
-
+        <!-- Donate button -->
+        <button id="donate-submit-quota"
+          class="w-full px-3 py-3 bg-primary rounded-lg text-secondary font-semibold">Donate Now</button>
+        <!-- modal -->
+        <dialog id="donated-quota-modal" class="modal">
+          <div class="modal-box text-center space-y-4">
+            <h1 class="text-4xl font-extrabold text-secondary">Congrates!</h1>
+            <img src="./assets/coin.png" class="mx-auto" alt="">
+            <p class="text-secondary font-medium opacity-70">You Have Donated for Humankind</p>
+            <h2 class="text-secondary text-xl font-bold">Successfully</h2>
+            <div class="modal-action justify-center">
+              <form method="dialog">
+                <button class="btn">close confirmation</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </div>
     </div>
-    
+
   </div>
-    <!-- Donation end here -->
+  <!-- Donation end here -->
 
-    <!-- History start here -->
-    <div id="history-section" class="w-11/12 mx-auto mt-4 hidden">
-      <div id="history-list" class="w-full ">
+  <!-- History start here -->
+  <div id="history-section" class="w-11/12 mx-auto mt-4 hidden">
+    <div id="history-list" class="w-full ">
 
-      </div>
     </div>
-    <!-- History end here -->
+  </div>
+  <!-- History end here -->
+
   <!-- mian end here -->
+
+  <!-- footer start here -->
+  <section class="py-12 bg-bgColor mt-20">
+
+  </section>
+  <!-- footer end here -->
 
 
   <!-- js link -->
-   <script src="./js/utility.js"></script>
-   <script src="./js/index.js"></script>
+  <script src="./js/utility.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
