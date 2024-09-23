@@ -1,11 +1,10 @@
-
 // donation noakhali amount button
 document.getElementById("donate-submit-noakhali").addEventListener("click", function(){
     
     // get the input value
     const donateNoakhali = getInputFieldValueById("donation-amount-noakhali");
 
-     // validation
+     // validation 
      if(isNaN(donateNoakhali) || donateNoakhali <= 0 ){
         alert("Invalid donation Amount")
         return;
@@ -18,11 +17,12 @@ document.getElementById("donate-submit-noakhali").addEventListener("click", func
     document.getElementById("donation-noakhali").innerText = newBalance;
     
     const availableBalance = getTextfieldValueById("available-balance");
-    // validation
-    if(donateNoakhali > availableBalance){
-        alert("donation amount is greater than the account balance..")
-        return;
-    }  
+  
+        // validation for Donation amount exceeds available balance
+        if(donateNoakhali > availableBalance){
+            alert("donation amount is greater than the account balance..")
+            return;
+        }
     
     const totalBalance = availableBalance - donateNoakhali;
     //navbar available balance show
@@ -40,7 +40,9 @@ document.getElementById("donate-submit-noakhali").addEventListener("click", func
     const historyContainer = document.getElementById("history-list");
    
     historyContainer.appendChild(historyItems);
-  
+
+  // open the modal
+    document.getElementById('donated-noakhali-modal').showModal();
 })
 
 
@@ -85,6 +87,9 @@ document.getElementById("donate-submit-feni").addEventListener("click", function
    
     historyContainer.appendChild(historyItems);
      
+    // open the modal
+    document.getElementById('donated-feni-modal').showModal();
+
 })
 
 
@@ -128,4 +133,7 @@ document.getElementById("donate-submit-quota").addEventListener("click", functio
       const historyContainer = document.getElementById("history-list");
      
       historyContainer.appendChild(historyItems);
+
+       // open the modal
+    document.getElementById('donated-quota-modal').showModal();
 })
