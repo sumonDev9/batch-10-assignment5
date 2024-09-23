@@ -25,9 +25,20 @@ document.getElementById("donate-submit-noakhali").addEventListener("click", func
     }  
     
     const totalBalance = availableBalance - donateNoakhali;
-    
+    //navbar available balance show
     document.getElementById("available-balance").innerText = totalBalance;
 
+    // history section
+    const historyItems = document.createElement("div");
+    historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
+    historyItems.innerHTML =`
+        <h1 class="text-secondary text-xl font-bold mb-3">${donateNoakhali} Taka is Donate for Flood at Noakhali, Bangladesh.</h1>
+        <p class="text-secondary opacity-70">${new Date()}</p>
+    `
+    const historyContainer = document.getElementById("history-list");
+   
+    historyContainer.appendChild(historyItems);
+  
 })
 
 
@@ -58,11 +69,21 @@ document.getElementById("donate-submit-feni").addEventListener("click", function
 
      document.getElementById("available-balance").innerText = totalBalance;
 
+       // history section
+    const historyItems = document.createElement("div");
+    historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
+    historyItems.innerHTML =`
+        <h1 class="text-secondary text-xl font-bold mb-3">${donateFani} Taka is Donate for Flood Relief in Feni,Bangladesh.</h1>
+        <p class="text-secondary opacity-70">${new Date()}</p>
+    `
+    const historyContainer = document.getElementById("history-list");
+   
+    historyContainer.appendChild(historyItems);
      
 })
 
 
-// 
+// donation Quota
 
 document.getElementById("donate-submit-quota").addEventListener("click", function(){
     // get the input value
@@ -90,4 +111,14 @@ document.getElementById("donate-submit-quota").addEventListener("click", functio
 
     document.getElementById("available-balance").innerText = totalBalance;
     
+      // history section
+      const historyItems = document.createElement("div");
+      historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
+      historyItems.innerHTML =`
+          <h1 class="text-secondary text-xl font-bold mb-3">${donateQuota} Taka is Donated for Aid for Injured in the Quota Movement.</h1>
+          <p class="text-secondary opacity-70">${new Date()}</p>
+      `
+      const historyContainer = document.getElementById("history-list");
+     
+      historyContainer.appendChild(historyItems);
 })
