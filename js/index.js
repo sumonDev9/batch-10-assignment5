@@ -27,14 +27,16 @@ document.getElementById("donate-submit-noakhali").addEventListener("click", func
     const totalBalance = availableBalance - donateNoakhali;
     //navbar available balance show
     document.getElementById("available-balance").innerText = totalBalance;
+    // get the title value
+    const donationNameNoakhali = document.getElementById("donation-name-noakhali").innerText;
 
     // history section
     const historyItems = document.createElement("div");
     historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
     historyItems.innerHTML =`
-        <h1 class="text-secondary text-xl font-bold mb-3">${donateNoakhali} Taka is Donate for Flood at Noakhali, Bangladesh.</h1>
+        <h1 class="text-secondary text-xl font-bold mb-3">${donateNoakhali} Taka is ${donationNameNoakhali}.</h1>
         <p class="text-secondary opacity-70">${new Date()}</p>
-    `
+    `;
     const historyContainer = document.getElementById("history-list");
    
     historyContainer.appendChild(historyItems);
@@ -68,14 +70,17 @@ document.getElementById("donate-submit-feni").addEventListener("click", function
      const totalBalance = availableBalance - donateFani;
 
      document.getElementById("available-balance").innerText = totalBalance;
+     // get the title value
+     const donationNameFeni = document.getElementById("donation-name-feni").innerText;
+
 
        // history section
     const historyItems = document.createElement("div");
     historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
     historyItems.innerHTML =`
-        <h1 class="text-secondary text-xl font-bold mb-3">${donateFani} Taka is Donate for Flood Relief in Feni,Bangladesh.</h1>
+        <h1 class="text-secondary text-xl font-bold mb-3">${donateFani} Taka is ${donationNameFeni}.</h1>
         <p class="text-secondary opacity-70">${new Date()}</p>
-    `
+    `;
     const historyContainer = document.getElementById("history-list");
    
     historyContainer.appendChild(historyItems);
@@ -110,14 +115,16 @@ document.getElementById("donate-submit-quota").addEventListener("click", functio
     const totalBalance = availableBalance - donateQuota;
 
     document.getElementById("available-balance").innerText = totalBalance;
+    // get the title value
+    const donationNameQuota = document.getElementById("donation-name-quota").innerText;
     
       // history section
       const historyItems = document.createElement("div");
       historyItems.className = "bg-white p-6 border-2 border-[rgba(17, 17, 17, 0.1)] mb-4 rounded-lg";
       historyItems.innerHTML =`
-          <h1 class="text-secondary text-xl font-bold mb-3">${donateQuota} Taka is Donated for Aid for Injured in the Quota Movement.</h1>
+          <h1 class="text-secondary text-xl font-bold mb-3">${donateQuota} Taka is Donated for ${donationNameQuota}.</h1>
           <p class="text-secondary opacity-70">${new Date()}</p>
-      `
+      `;
       const historyContainer = document.getElementById("history-list");
      
       historyContainer.appendChild(historyItems);
