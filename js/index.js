@@ -3,35 +3,27 @@ document.getElementById("donate-submit-noakhali").addEventListener("click", func
 
     // get the input value
     const donateNoakhali = getInputFieldValueById("donation-amount-noakhali");
-
+    
     // validation 
-
-    // check input field is empty.
-    if (!donateNoakhali) {
-        alert('Please donation amount.');
-        return;
-    }
-
     // check input field contains an invalid number
     if (isNaN(donateNoakhali) || donateNoakhali <= 0) {
         alert("Invalid donation amount")
         return;
     }
 
+  
     // donation noakhali 
     const balance = getTextfieldValueById("donation-noakhali");
-    const newBalance = balance + donateNoakhali;
-
-    document.getElementById("donation-noakhali").innerText = newBalance;
-
     const availableBalance = getTextfieldValueById("available-balance");
 
     // validation for Donation amount exceeds available balance
-
     if (donateNoakhali > availableBalance) {
         alert("donation amount exceeds the available balance..")
         return;
     }
+    const newBalance = balance + donateNoakhali;
+
+    document.getElementById("donation-noakhali").innerText = newBalance;
 
     const totalBalance = availableBalance - donateNoakhali;
     //navbar available balance show
@@ -52,6 +44,8 @@ document.getElementById("donate-submit-noakhali").addEventListener("click", func
 
     // open the modal
     document.getElementById('donated-noakhali-modal').showModal();
+
+
 })
 
 
@@ -73,10 +67,6 @@ document.getElementById("donate-submit-feni").addEventListener("click", function
     }
 
     const balance = getTextfieldValueById("donation-feni");
-    const newBalance = balance + donateFani;
-
-    document.getElementById("donation-feni").innerText = newBalance;
-
     const availableBalance = getTextfieldValueById("available-balance");
 
     // validation for Donation amount exceeds available balance
@@ -84,6 +74,9 @@ document.getElementById("donate-submit-feni").addEventListener("click", function
         alert("donation amount is greater than the account balance..")
         return;
     }
+    const newBalance = balance + donateFani;
+
+    document.getElementById("donation-feni").innerText = newBalance;
     const totalBalance = availableBalance - donateFani;
 
     document.getElementById("available-balance").innerText = totalBalance;
@@ -116,10 +109,11 @@ document.getElementById("donate-submit-quota").addEventListener("click", functio
 
     // validation
     // check input field is empty.
-    if (!donateQuota) {
-        alert('Please donation amount.');
-        return;
-    }
+    // if (!donateQuota) {
+    //     alert('Please donation amount.');
+    //     return;
+    // }
+
     // check input field contains an invalid number
     if (isNaN(donateQuota) || donateQuota <= 0) {
         alert("Invalid donation Amount");
@@ -127,17 +121,17 @@ document.getElementById("donate-submit-quota").addEventListener("click", functio
     }
 
     const balance = getTextfieldValueById("donation-quota");
-    const newBalance = balance + donateQuota;
-
-    document.getElementById("donation-quota").innerText = newBalance;
-
     const availableBalance = getTextfieldValueById("available-balance");
 
-     // validation for Donation amount exceeds available balance
+    // validation for Donation amount exceeds available balance
     if (donateQuota > availableBalance) {
         alert("donation amount is greater than the account balance..")
         return;
     }
+    const newBalance = balance + donateQuota;
+
+    document.getElementById("donation-quota").innerText = newBalance;
+
     const totalBalance = availableBalance - donateQuota;
 
     document.getElementById("available-balance").innerText = totalBalance;
