@@ -46,3 +46,4 @@ function getTextfieldValueById(id){
     const textNumber = Number(document.getElementById(id).innerText);
     return textNumber;
 }
+

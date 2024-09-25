@@ -139,3 +139,11 @@ document.getElementById("donate-submit-quota").addEventListener("click", functio
     // open the modal
     document.getElementById('donated-quota-modal').showModal();
 })
+
+
+
+// Redirect to blog buttone click go to home page
+document.getElementById("blog-link-btn").addEventListener("click", function(){
+    window.location.href = "./blog.html";
+})
+
